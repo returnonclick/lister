@@ -142,8 +142,21 @@ ul.fusion-checklist li.fusion-li-item h3 {
     margin-top: 0px;
 }
 
-ul.fusion-checklist li.fusion-li-item i {
+ul.fusion-checklist li.fusion-li-item span {
     display: none;
+}
+ul.fusion-checklist li.fusion-li-item .fusion-li-item-content {
+    margin-left: 10px !important;
+}
+
+@media only screen and ( max-width:800px ) {
+    ul.fusion-checklist li.fusion-li-item h1 {
+        font-size: 2rem;
+    }
+
+    ul.fusion-checklist li.fusion-li-item h3 {
+        font-size: 1rem;
+    }
 }
 
 
@@ -169,4 +182,10 @@ ul.fusion-checklist li.fusion-li-item h1:hover {
 ul.fusion-checklist li.fusion-li-item h3:hover {
     color: rgba(255,255,255,0.7);
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #000000 , 0 0 70px #000000 , 0 0 80px #000000 , 0 0 100px #000000 ;
+}
+
+@media only screen and ( max-width:800px ) {
+    .fusion-portfolio-wrapper .fusion-image-wrapper img {
+        min-width: 100%;
+    }
 }
