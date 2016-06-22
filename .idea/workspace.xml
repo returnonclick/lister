@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06274dbb-52d7-4a91-87f2-bb102b65d9d2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Avada-Child-Theme/style.css" afterPath="$PROJECT_DIR$/wp-content/themes/Avada-Child-Theme/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-13.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-13.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-1372.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-1372.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-15.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-15.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-7.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-9.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-9.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-global.css" afterPath="$PROJECT_DIR$/wp-content/uploads/avada-styles/avada-global.css" />
-    </list>
+    <list default="true" id="06274dbb-52d7-4a91-87f2-bb102b65d9d2" name="Default" comment="" />
     <ignored path="lister.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -213,7 +204,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ROC CLIENTS/LUXE" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/ROC CLIENTS/SPORTELUXE" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
@@ -659,12 +650,12 @@
       <option name="presentableId" value="Default" />
       <updated>1466383422495</updated>
       <workItem from="1466383424595" duration="132000" />
-      <workItem from="1466384301800" duration="27129000" />
+      <workItem from="1466384301800" duration="28241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27261000" />
+    <option name="totallyTimeSpent" value="28373000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,7 +668,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
