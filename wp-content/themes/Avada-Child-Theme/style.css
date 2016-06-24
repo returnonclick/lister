@@ -132,14 +132,16 @@ ul.fusion-checklist li.fusion-li-item {
    padding-bottom: 20px;
 }
 
-ul.fusion-checklist li.fusion-li-item h1 {
-    font-size: 5rem;
+.title_soul_doubt h1 {
+    padding: 50px;
+    font-size: 5rem !important;
     margin-bottom: 0px;
 }
 
 ul.fusion-checklist li.fusion-li-item h3 {
     font-size: 3rem;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 ul.fusion-checklist li.fusion-li-item span {
@@ -150,8 +152,9 @@ ul.fusion-checklist li.fusion-li-item .fusion-li-item-content {
 }
 
 @media only screen and ( max-width:800px ) {
-    ul.fusion-checklist li.fusion-li-item h1 {
-        font-size: 2rem;
+    .title_soul_doubt h1 {
+        font-size: 2rem !important;
+	padding: 10px;
     }
 
     ul.fusion-checklist li.fusion-li-item h3 {
@@ -162,7 +165,7 @@ ul.fusion-checklist li.fusion-li-item .fusion-li-item-content {
 
 
 
-ul.fusion-checklist li.fusion-li-item h1, ul.fusion-checklist li.fusion-li-item h3 {
+.title_soul_doubt h1, ul.fusion-checklist li.fusion-li-item h3 {
     color: rgba(0,0,0,0.7);
     -o-text-overflow: clip;
     text-overflow: clip;
@@ -174,7 +177,7 @@ ul.fusion-checklist li.fusion-li-item h1, ul.fusion-checklist li.fusion-li-item 
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-ul.fusion-checklist li.fusion-li-item h1:hover {
+.title_soul_doubt h1:hover {
     color: rgba(255,255,255,0.7);
     text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #ff0000 , 0 0 70px #ff0000 , 0 0 80px #ff0000 , 0 0 100px #ff0000 ;
 }
