@@ -99,7 +99,7 @@ hr {
 .page-template-portfolio-one-column .fusion-portfolio-content .entry-title{
 
     font-size: 3rem !important;
-    padding-top: 100px;
+    padding-top: 20%;
 
 }
 
@@ -115,6 +115,14 @@ hr {
     height: 500px;
     width: 100%;
 }
+
+@media only screen and ( max-width:800px ) {
+    .fusion-portfolio-one-nontext .fusion-image-wrapper {
+        height: auto;
+    }
+}
+
+
 
 .fusion-portfolio-one-nontext .fusion-image-wrapper img {
     width: 100% !important;
