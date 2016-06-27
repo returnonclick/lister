@@ -16,6 +16,10 @@
                     $('.fusion-logo-link img').css('filter', 'brightness(0%)');
                     $('.fusion-logo-link img').css('-webkit-filter', 'brightness(0%)');
                 }
+                
+                if (body.hasClass('page-template-default') && !body.hasClass('home')) {
+                    body.css('background','url(http://localhost:8888/lister/wp-content/uploads/2016/06/wall.jpg)');
+                }
 
 
 

@@ -112,11 +112,14 @@ hr {
     float: left;
     margin: 0 25px 15px 0;
     max-width: 740px;
+    height: 500px;
     width: 100%;
 }
 
 .fusion-portfolio-one-nontext .fusion-image-wrapper img {
     width: 100% !important;
+    height: 100%;
+    background-size: contain;
 }
 
 .fusion-header-v6 .fusion-flyout-menu-icons .fusion-flyout-menu-toggle {
@@ -191,4 +194,36 @@ ul.fusion-checklist li.fusion-li-item h3:hover {
     .fusion-portfolio-wrapper .fusion-image-wrapper img {
         min-width: 100%;
     }
+}
+
+.page-template-portfolio-one-column .fusion-rollover-content, .page-template-portfolio-one-column .fusion-rollover-title {
+    height: 100%;
+}
+
+.portfolio-full h1{
+    font-size: 4rem;
+    margin-bottom: 0px;
+    margin-top: -50px;
+}
+.portfolio-full h3{
+    font-size: 3rem;
+    margin-top: -50px;
+    margin-bottom: 0px;
+}
+@media only screen and ( max-width:800px ) {
+
+}
+
+.single-avada_portfolio .flex-control-nav {
+    padding-top: 10px;
+    position: relative !important;
+}
+
+.single-avada_portfolio .flex-control-thumbs li{
+    width: 10%;
+}
+
+
+.single-avada_portfolio .flex-control-thumbs img {
+
 }

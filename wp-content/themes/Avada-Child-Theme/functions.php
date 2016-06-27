@@ -50,6 +50,13 @@ function your_prefix_meta_boxes( $meta_boxes ) {
 					'changeYear'      => true,
 					'showButtonPanel' => true,
 				),
+			),
+			// PLUPLOAD IMAGE UPLOAD (WP 3.3+)
+			array(
+				'name'             => esc_html__( 'Plupload Image Upload', 'roc' ),
+				'id'               => "{$prefix}plupload",
+				'type'             => 'plupload_image',
+				'max_file_uploads' => 100,
 			)
 		),
 	);

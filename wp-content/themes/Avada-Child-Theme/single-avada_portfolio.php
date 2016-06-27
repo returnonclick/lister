@@ -99,46 +99,50 @@
 					<?php if ( 0 < avada_number_of_featured_images() || get_post_meta( $post->ID, 'pyre_video', true ) ) : ?>
 						<div class="fusion-flexslider flexslider fusion-post-slideshow post-slideshow fusion-flexslider-loading">
 							<ul class="slides">
-								<?php if ( get_post_meta( $post->ID, 'pyre_video', true ) ) : ?>
-									<li>
-										<div class="full-video">
-											<?php echo get_post_meta( $post->ID, 'pyre_video', true ); ?>
-										</div>
-									</li>
-								<?php endif; ?>
-								<?php if ( has_post_thumbnail() && ( ! fusion_get_mismatch_option( 'portfolio_disable_first_featured_image', 'show_first_featured_image', $post->ID ) ||  'no' == fusion_get_mismatch_option( 'portfolio_disable_first_featured_image', 'show_first_featured_image', $post->ID ) ) ) : ?>
-									<?php $attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
-									<?php $full_image       = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
-									<?php $attachment_data  = wp_get_attachment_metadata( get_post_thumbnail_id() ); ?>
-									<li>
-										<?php if ( Avada()->settings->get( 'status_lightbox' ) && Avada()->settings->get( 'status_lightbox_single' ) ) : ?>
-											<a href="<?php echo $full_image[0]; ?>" data-rel="iLightbox[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>" data-title="<?php echo get_post_field( 'post_title', get_post_thumbnail_id() ); ?>" data-caption="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>">
-												<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" role="presentation" />
-											</a>
-										<?php else : ?>
+
+								<!-- IMAGES TO GALLERY -->
+
+
+
+
+								<?php $attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+								<?php $full_image       = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+								<?php $attachment_data  = wp_get_attachment_metadata( get_post_thumbnail_id() ); ?>
+								<li data-thumb="<?php echo $full_image[0]; ?>">
+										<a href="<?php echo $full_image[0]; ?>" data-rel="iLightbox[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>" data-title="<?php echo get_post_field( 'post_title', get_post_thumbnail_id() ); ?>" data-caption="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>">
 											<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" role="presentation" />
-										<?php endif; ?>
-									</li>
-								<?php endif; ?>
-								<?php $i = 2; ?>
-								<?php while ( $i <= Avada()->settings->get( 'posts_slideshow_number' ) ) : ?>
-									<?php $attachment_new_id = kd_mfi_get_featured_image_id( 'featured-image-' . $i, 'avada_portfolio' ); ?>
-									<?php if ( $attachment_new_id ) : ?>
-										<?php $attachment_image = wp_get_attachment_image_src( $attachment_new_id, 'full' ); ?>
-										<?php $full_image       = wp_get_attachment_image_src( $attachment_new_id, 'full' ); ?>
-										<?php $attachment_data  = wp_get_attachment_metadata( $attachment_new_id ); ?>
-										<li>
-											<?php if ( Avada()->settings->get( 'status_lightbox' ) && Avada()->settings->get( 'status_lightbox_single' ) ) : ?>
-												<a href="<?php echo $full_image[0]; ?>" data-rel="iLightbox[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field( 'post_excerpt', $attachment_new_id ); ?>" data-title="<?php echo get_post_field( 'post_title', $attachment_new_id ); ?>" data-caption="<?php echo get_post_field( 'post_excerpt', $attachment_new_id ); ?>">
-													<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta( $attachment_new_id, '_wp_attachment_image_alt', true ); ?>" role="presentation" />
-												</a>
-											<?php else : ?>
-												<img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo get_post_meta( $attachment_new_id, '_wp_attachment_image_alt', true ); ?>" role="presentation" />
-											<?php endif; ?>
+										</a>
+								</li>
+
+								<?php $attachment_image = rwmb_meta( $prefix . 'plupload', 'type=image&size=full' ); ?>
+								<?php $full_image       = rwmb_meta( $prefix . 'plupload', 'type=image&size=full' ); ?>
+								<?php $attachment_data  = rwmb_meta( $prefix . 'plupload', 'type=image' ); ?>
+								<?php
+								if ( !empty( $full_image ) ) {
+									foreach ( $full_image as $image ) {
+
+										?>
+
+										<li data-thumb="<?php echo $image['full_url'] ?>">
+
+											<a href="<?php echo $image['full_url'] ?>"
+											   data-rel="iLightbox[gallery<?php the_ID(); ?>]"
+											   >
+												<img src="<?php echo $image['url']; ?>" role="presentation"
+													 width='<?php echo $image['width'] ?>'
+													 height='<?php echo $image['height'] ?>'
+													 alt='<?php echo $image['alt'] ?>'/>
+											</a>
+
 										</li>
-									<?php endif; ?>
-									<?php $i++; ?>
-								<?php endwhile; ?>
+										<?php
+									}
+								}
+								?>
+
+
+
+
 							</ul>
 						</div>
 					<?php endif; ?>
@@ -230,6 +234,18 @@
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
+	<script type="text/javascript">
+		jQuery(window).load(function(){
+			jQuery('.flexslider').flexslider({
+				animation: "slide",
+				controlNav: "thumbnails",
+				smoothHeight: "true",
+				start: function(slider){
+					jQuery('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
 </div>
 <?php do_action( 'avada_after_content' ); ?>
 <?php get_footer();
