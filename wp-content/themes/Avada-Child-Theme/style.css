@@ -235,3 +235,11 @@ ul.fusion-checklist li.fusion-li-item h3:hover {
 .single-avada_portfolio .flex-control-thumbs img {
 
 }
+
+.fusion-main-menu .current-menu-item > a {
+    border-color: #9d1111 !important;
+}
+
+.fusion-main-menu > ul > li > a:hover, .fusion-main-menu > ul > li > a:active, .fusion-main-menu > ul > li > a:focus {
+    border-color: #9d1111 !important;
+}
